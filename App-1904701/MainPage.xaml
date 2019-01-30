@@ -9,6 +9,61 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
+        <RelativePanel>
+            <Button Name="HamburgerButton" 
+                    RelativePanel.AlignLeftWithPanel="True"
+                    FontFamily="Segoe MDL2 Assets"
+                    FontSize="16"
+                    Content="&#xE700;" 
+                    Click="HamburgerButton_Click" />
+
+            <Button Name="BackButton"
+                    RelativePanel.RightOf="HamburgerButton" 
+                    FontFamily="Segoe MDl2 Assets" 
+                    FontSize="16"
+                    Content="&#xE0C4;" 
+                    Click="BackButton_Click" />
+        </RelativePanel>
+
+        <SplitView Grid.Row="1" 
+                   Name="MainSplitView"
+                   DisplayMode="CompactOverlay" 
+                   OpenPaneLength="200" 
+                   CompactPaneLength="40">
+            <SplitView.Pane>
+                <ListBox SelectionMode="Single" 
+                         SelectionChanged="ListBox_SelectionChanged">
+                    <ListBoxItem Name="HomePage">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" 
+                                       FontSize="16" 
+                                       Text="&#xE80F;" />
+                            <TextBlock FontSize="14" 
+                                       Margin="20,0,0,0"
+                                       Text="Home" />
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="Page1">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" 
+                                       FontSize="14" 
+                                       Text="&#xE1CE;" />
+                            <TextBlock FontSize="12" 
+                                       Margin="20,0,0,0"
+                                       Text="Page1" />
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Frame Name="MainFrame"></Frame>
+            </SplitView.Content>
+
+        </SplitView>
     </Grid>
 </Page>

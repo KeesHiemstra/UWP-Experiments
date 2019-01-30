@@ -15,17 +15,22 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace App_1904701
+namespace MissedPrograms
 {
   /// <summary>
   /// An empty page that can be used on its own or navigated to within a Frame.
   /// </summary>
   public sealed partial class MainPage : Page
   {
+    private DateTime MaximumDate = DateTime.Now.Date.AddDays(-1);
+
     public MainPage()
     {
       this.InitializeComponent();
-      BackButton.Visibility = Visibility.Collapsed;
+
+      PageDate.Date = MaximumDate;
+      PageDate.DateFormat = "{dayofweek.full}‎ ‎{month.full}‎ ‎{day.integer} ‎{year.full}";
+      PageDate.MaxDate = MaximumDate;
     }
 
     private void HamburgerButton_Click(object sender, RoutedEventArgs e)
@@ -33,27 +38,12 @@ namespace App_1904701
       MainSplitView.IsPaneOpen = !MainSplitView.IsPaneOpen;
     }
 
-    private void BackButton_Click(object sender, RoutedEventArgs e)
-    {
-      if (MainFrame.CanGoBack)
-      {
-        MainFrame.GoBack();
-        HomePage.IsSelected = true;
-
-      }
-    }
-
     private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
       if (HomePage.IsSelected)
       {
-        BackButton.Visibility = Visibility.Collapsed;
+        //BackButton.Visibility = Visibility.Collapsed;
         MainFrame.Navigate(typeof(HomePage));
-      }
-      else if (Page1.IsSelected)
-      {
-        BackButton.Visibility = Visibility.Collapsed;
-        MainFrame.Navigate(typeof(Page1));
       }
     }
   }
