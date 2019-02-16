@@ -7,14 +7,14 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="f852b30b-e71d-4266-8ea3-14aeca912857"
+    Name="360cb2de-b22c-446b-920c-2e01c599e768"
     Publisher="CN=Kees"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="f852b30b-e71d-4266-8ea3-14aeca912857" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="360cb2de-b22c-446b-920c-2e01c599e768" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>MissedPrograms</DisplayName>
+    <DisplayName>App-1907301</DisplayName>
     <PublisherDisplayName>Kees</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -30,12 +30,12 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="MissedPrograms.App">
+      EntryPoint="App_1907301.App">
       <uap:VisualElements
-        DisplayName="MissedPrograms"
+        DisplayName="App-1907301"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="MissedPrograms"
+        Description="App-1907301"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
