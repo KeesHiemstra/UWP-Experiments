@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid LostFocus="Grid_LostFocus">
-        <CalendarDatePicker x:Name="MonthCalendar" HorizontalAlignment="Left" Margin="86,54,0,0" VerticalAlignment="Top" DateChanged="MonthCalendar_DateChanged" />
+        <CalendarDatePicker x:Name="MonthCalendar" HorizontalAlignment="Left" Margin="86,54,0,0" VerticalAlignment="Top" DateChanged="MonthCalendar_DateChanged" FirstDayOfWeek="Monday" DateFormat="{}{year.full}/{month.integer}/{day.integer}" DayOfWeekFormat="{}{dayofweek.abbreviated}" />
         <Button x:Name="LaunchButton" Content="Go to APOD launch date" HorizontalAlignment="Left" Margin="86,102,0,0" VerticalAlignment="Top" Click="LaunchButton_Click" />
         <Border BorderBrush="Black" HorizontalAlignment="Left" Height="111" Margin="86,154,0,0" VerticalAlignment="Top" Width="255" BorderThickness="1,1,1,1">
             <StackPanel Margin="5">
