@@ -77,7 +77,10 @@ namespace App_1907601
 
     private async void MonthCalendar_DateChanged(CalendarDatePicker sender, CalendarDatePickerDateChangedEventArgs args)
     {
+      PreviousDayButton.IsEnabled = args.NewDate >= MonthCalendar.MinDate;
+      NextDayButton.IsEnabled = args.NewDate < MonthCalendar.MaxDate;
       await RetrievePhoto();
+
     }
 
     private bool IsSupportedFormat(string photoURL)
@@ -240,6 +243,21 @@ namespace App_1907601
       {
         MonthCalendar.Date = DateTime.Today;
       }
+    }
+
+    private void PreviousDayButton_Click(object sender, RoutedEventArgs e)
+    {
+      MonthCalendar.Date = MonthCalendar.Date.Value.AddDays(-1);
+    }
+
+    private void NextDayButton_Click(object sender, RoutedEventArgs e)
+    {
+      MonthCalendar.Date = MonthCalendar.Date.Value.AddDays(1);
+    }
+
+    private void ImageCopyrightTextBox_Holding(object sender, Windows.UI.Xaml.Input.HoldingRoutedEventArgs e)
+    {
+
     }
   }
 }
