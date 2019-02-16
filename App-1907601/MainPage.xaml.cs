@@ -1,22 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Newtonsoft.Json.Linq;
+
+using System;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-using Windows.UI.Xaml.Media.Imaging;
-using Newtonsoft.Json.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media.Imaging;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -27,24 +19,25 @@ namespace App_1907601
   /// </summary>
   public sealed partial class MainPage : Page
   {
-    // The objective of the NASA API portal is to make NASA data, including imagery, 
-    // eminently accessible to application developers. 
-    const string EndpointURL = "https://api.nasa.gov/planetary/apod";
+    // The objective of the NASA API portal is to make NASA data, including imagery,
+    // eminently accessible to application developers.
+    private const string EndpointURL = "https://api.nasa.gov/planetary/apod";
 
     // June 16, 1995  : the APOD launch date.
-    DateTime launchDate = new DateTime(1995, 6, 16);
+    private DateTime launchDate = new DateTime(1995, 6, 16);
 
     // A count of images downloaded today.
-    int imageCountToday;
+    private int imageCountToday;
 
     // Settings name strings, used to preserve UI values between sessions.
-    const string SettingDateToday = "date today";
-    const string SettingShowOnStartup = "show on startup";
-    const string SettingImageCountToday = "image count today";
-    const string SettingLimitRange = "limit range";
+    private const string SettingDateToday = "date today";
+
+    private const string SettingShowOnStartup = "show on startup";
+    private const string SettingImageCountToday = "image count today";
+    private const string SettingLimitRange = "limit range";
 
     // Declare a container for the local settings.
-    Windows.Storage.ApplicationDataContainer localSettings;
+    private Windows.Storage.ApplicationDataContainer localSettings;
 
     public MainPage()
     {

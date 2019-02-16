@@ -9,25 +9,24 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid LostFocus="Grid_LostFocus">
-        <CalendarDatePicker x:Name="MonthCalendar" HorizontalAlignment="Left" Margin="86,54,0,0" VerticalAlignment="Top" DateChanged="MonthCalendar_DateChanged"/>
-        <Button x:Name="LaunchButton" Content="Go to APOD launch date" HorizontalAlignment="Left" Margin="86,102,0,0" VerticalAlignment="Top" Click="LaunchButton_Click"/>
+        <CalendarDatePicker x:Name="MonthCalendar" HorizontalAlignment="Left" Margin="86,54,0,0" VerticalAlignment="Top" DateChanged="MonthCalendar_DateChanged" />
+        <Button x:Name="LaunchButton" Content="Go to APOD launch date" HorizontalAlignment="Left" Margin="86,102,0,0" VerticalAlignment="Top" Click="LaunchButton_Click" />
         <Border BorderBrush="Black" HorizontalAlignment="Left" Height="111" Margin="86,154,0,0" VerticalAlignment="Top" Width="255" BorderThickness="1,1,1,1">
             <StackPanel Margin="5">
                 <CheckBox x:Name="ShowTodaysImageCheckBox" Content="Show today's image on start up" />
                 <CheckBox x:Name="LimitRangeCheckBox" Content="Limit range to current year" Checked="LimitRangeCheckBox_Checked" Unchecked="LimitRangeCheckBox_Unchecked" />
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Images downloaded today: "  VerticalAlignment="Center"/>
-                    <TextBox Name="ImagesTodayTextBox" IsReadOnly="True" Background="#FFFFFFC0"/>
+                    <TextBlock Text="Images downloaded today: "  VerticalAlignment="Center" />
+                    <TextBox Name="ImagesTodayTextBox" IsReadOnly="True" Background="#FFFFFFC0" />
                 </StackPanel>
             </StackPanel>
         </Border>
-        <TextBlock HorizontalAlignment="Left" Margin="89,302,0,0" Text="Image Credit and Copyright:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox x:Name="ImageCopyrightTextBox" HorizontalAlignment="Left" Margin="89,321,0,0" Text="" VerticalAlignment="Top" Background="#FFFFFFC0" Width="252"/>
-        <TextBox x:Name="DescriptionTextBox" HorizontalAlignment="Left" Margin="86,605,0,0" Text="" VerticalAlignment="Top" IsReadOnly="True" Background="#FFFFFFC0" TextWrapping="Wrap" Width="1142" Height="82"/>
-        <TextBlock HorizontalAlignment="Left" Margin="86,581,0,0" Text="Description:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="89,302,0,0" Text="Image Credit and Copyright:" TextWrapping="Wrap" VerticalAlignment="Top" />
+        <TextBox x:Name="ImageCopyrightTextBox" HorizontalAlignment="Left" Margin="89,321,0,0" Text="" VerticalAlignment="Top" Background="#FFFFFFC0" Width="252" />
+        <TextBox x:Name="DescriptionTextBox" HorizontalAlignment="Left" Margin="86,605,0,0" Text="" VerticalAlignment="Top" IsReadOnly="True" Background="#FFFFFFC0" TextWrapping="Wrap" Width="1142" Height="82" />
+        <TextBlock HorizontalAlignment="Left" Margin="86,581,0,0" Text="Description:" TextWrapping="Wrap" VerticalAlignment="Top" />
         <Border x:Name="PictureBorder" BorderBrush="Black" HorizontalAlignment="Left" Height="536" Margin="390,54,0,0" VerticalAlignment="Top" Width="838" BorderThickness="1,1,1,1">
-            <Image x:Name="ImagePictureBox" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+            <Image x:Name="ImagePictureBox" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" />
         </Border>
-
     </Grid>
 </Page>
