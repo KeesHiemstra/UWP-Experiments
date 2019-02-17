@@ -16,7 +16,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace App_1907601
+namespace App_1907701
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
